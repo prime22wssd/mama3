@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gracias Mamá</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', cursive, sans-serif;
+      background-color: #f8d1e0;
+      background-image: url('mama1.jpg'), url('mama2.jpg'), url('mama3.jpg'), url('mama4.jpg');
+      background-repeat: repeat;
+      background-size: 250px auto;
+      background-position: center;
+      color: #4d2c2c;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #e75480;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .letra {
+      white-space: pre-line;
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-top: 30px;
+      width: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+      width: 45%;
+      align-content: start;
+    }
+
+    .galeria img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 80%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .modal:target {
+      display: block;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .close:hover {
+      color: #e75480;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div>
+      <h1>Gracias Mamá</h1>
+      <h2>Un homenaje con todo mi corazón</h2>
+
+      <audio autoplay controls loop>
+        <source src="mama.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+      </audio>
+
+      <div class="letra">
+        Por llevarme 9 meses de parásito en ti  
+        Por darte una paliza el día en que te conocí  
+        Por la sangre que perdiste, justo cuando yo salí  
+
+        Te doy las gracias, muchas gracias mamá  
+
+        Por aguantarme todos mis berrinches y reproches  
+        Por tener sueño de día y casi no dormir de noche  
+        Por gastarte tu salario de dos meses en un coche  
+
+        Te digo gracias, muchas gracias mamá  
+
+        Por los más de cinco mil emparedados preparados  
+        Por las gripes y resfriados que yo mismo te he pegado  
+        Por cambiarme los pañales sin decir que olía mal  
+
+        Y por siempre ser mi medio de transporte personal  
+        Por entender las confusiones que la pubertad me trajo  
+        Por comprarme ropa buena para mi primer trabajo  
+        Por sacarme de las deudas cuándo estoy hasta el carajo  
+
+        Te doy las gracias, muchas gracias mamá  
+
+        ¡Ay, mamá!  
+
+        Te doy las gracias, muchas gracias mamá
+      </div>
+    </div>
+
+    <div class="galeria">
+      <a href="#img1"><img src="mama1.jpg" alt="mama1"></a>
+      <a href="#img2"><img src="mama2.jpg" alt="mama2"></a>
+      <a href="#img3"><img src="mama3.jpg" alt="mama3"></a>
+      <a href="#img4"><img src="mama4.jpg" alt="mama4"></a>
+    </div>
+  </div>
+
+  <!-- MODALES -->
+  <div id="img1" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="mama1.jpg">
+  </div>
+  <div id="img2" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="mama2.jpg">
+  </div>
+  <div id="img3" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="mama3.jpg">
+  </div>
+  <div id="img4" class="modal">
+    <a href="#" class="close">&times;</a>
+    <img class="modal-content" src="mama4.jpg">
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
